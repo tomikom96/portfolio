@@ -1,0 +1,29 @@
+@use 'colors' as *;
+
+@media (min-width: 992px) {
+	.header {
+		&__box {
+			&-links {
+				&-link {
+					font-size: 1.6rem;
+				}
+
+				&-icon {
+					text-align: center;
+					font-size: 2rem;
+					padding-right: 0.5rem;
+					color: $aztecBlue;
+				}
+			}
+		}
+	}
+	.nav {
+		&__item {
+	
+			&-link {
+				font-size: 1.4rem;
+				
+			}
+		}
+	}
+}
