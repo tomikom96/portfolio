@@ -8,6 +8,7 @@ const showList = () => {
 	ulList.classList.toggle("hide");
 	iconX.classList.toggle("hide");
 	btnBars.classList.toggle("hide");
+	rotateArrow();
 };
 
 navbarBtnBars.addEventListener("click", showList);

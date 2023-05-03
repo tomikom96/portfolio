@@ -1,4 +1,4 @@
-@use 'colors' as *;
+@use "colors" as *;
 
 @media (min-width: 992px) {
 	.header {
@@ -11,18 +11,27 @@
 				&-icon {
 					text-align: center;
 					font-size: 2rem;
-					padding-right: 0.5rem;
-					color: $aztecBlue;
+					padding-right: 2rem;
 				}
 			}
 		}
 	}
 	.nav {
+		&__list {
+			&-third-stage {
+				position: absolute;
+				display: none;
+				transform: translate(77%, -24%);
+			}
+		}
+
 		&__item {
-	
 			&-link {
-				font-size: 1.4rem;
-				
+				font-size: 1.7rem;
+
+				&-icon {
+					font-size: 1.7rem;
+				}
 			}
 		}
 	}

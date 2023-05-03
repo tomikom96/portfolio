@@ -38,8 +38,7 @@ main {
 .center {
 	width: 100%;
 	margin: 0 auto;
-	max-width: 1200px;
-	background-color: $dark;
+	max-width: 1600px;
 }
 
 .hide {
@@ -170,21 +169,29 @@ main {
 			text-decoration: none;
 			font-weight: bold;
 			font-size: 1.3rem;
+			position: relative;
 
 			&:hover {
 				background-color: $aztecBlue;
 			}
 
-			&-icon-down {
-				display: inline-block;
-				text-align: right;
+			&--special {
+				padding-right: 4rem;
 			}
+			&-icon {
+				position: absolute;
+				right: 10px;
 
-			&-icon-right {
-				text-align: right;
-				display: none;
+				&-down {
+					display: inline-block;
+					text-align: right;
+				}
+
+				&-right {
+					text-align: right;
+					display: none;
+				}
 			}
-
 			&-second-stage {
 				min-width: 280px;
 				padding-left: 3rem;
@@ -205,6 +212,10 @@ main {
 		&-second-stage,
 		&-third-stage {
 			border-bottom: 1px solid $aztecBlue;
+		}
+		&-second-stage:last-child,
+		&-third-stage:last-child {
+			border-bottom: 0;
 		}
 		&-second-stage-nav {
 			position: relative;
