@@ -127,11 +127,6 @@ main {
 		justify-content: flex-start;
 		background-color: $dark;
 		padding: 0 1rem;
-
-		&-second-stage,
-		&-third-stage {
-			display: none;
-		}
 	}
 
 	&__item {
@@ -177,6 +172,7 @@ main {
 
 			&--special {
 				padding-right: 4rem;
+				cursor: pointer;
 			}
 			&-icon {
 				position: absolute;
@@ -202,9 +198,6 @@ main {
 			}
 		}
 		&-second-stage {
-			&:hover .nav__list-third-stage {
-				display: block;
-			}
 			&:hover .nav__item-link-icon {
 				color: $white;
 			}
@@ -219,14 +212,9 @@ main {
 		}
 		&-second-stage-nav {
 			position: relative;
-
-			&:hover .nav__list-third-stage {
-				display: block;
-			}
 		}
-
-		&:hover .nav__list-second-stage {
-			display: block;
-		}
+	}
+	&--hide {
+		display: none;
 	}
 }
