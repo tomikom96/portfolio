@@ -50,12 +50,14 @@
 			display: flex;
 			flex-direction: row;
 			position: sticky;
-
+			
 			&-third-stage {
 				position: absolute;
 				display: none;
 				transform: translate(74.5%, -24%);
 			}
+
+			
 		}
 
 		&__item {
@@ -64,6 +66,9 @@
 
 			&:hover .nav__list-second-stage {
 				display: block;
+			}
+
+			& .nav__list-second-stage {
 				position: absolute;
 			}
 			&-second-stage {
@@ -99,6 +104,8 @@
 				}
 			}
 		}
-		
+		&--hide {
+			display: none;
+		}
 	}
 }

@@ -24,5 +24,5 @@ const showNav3 = () => {
 
 navbarBtnBars.addEventListener("click", showNav);
 navbarBtnX.addEventListener("click", showNav);
-liItem.addEventListener("click", showNav2);
+liItem.addEventListener("click" || "mouseleave", showNav2);
 liItem2.addEventListener("click", showNav3);
