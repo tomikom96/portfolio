@@ -30,10 +30,7 @@ const showNavSmall3 = () => {
 };
 
 const showNav2 = () => {
-	if (
-		screen.width >= minWidth &&
-		ulList2.classList.contains("nav--hide")
-	) {
+	if (screen.width >= minWidth && ulList2.classList.contains("nav--hide")) {
 		ulList2.classList.remove("nav--hide");
 	}
 };
