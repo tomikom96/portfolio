@@ -53,6 +53,7 @@ const hideNavMobile = () => {
 		btnBars.classList.toggle("hide");
 		ulList2.classList.add("nav--hide");
 		ulList3.classList.add("nav--hide");
+		
 	}
 };
 

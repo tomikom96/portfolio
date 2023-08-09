@@ -8,8 +8,9 @@ html {
 body {
 	width: 100%;
 	min-width: 280px;
-	font-family: "Roboto", sans-serif;
 	position: relative;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
 }
 
 main {
@@ -18,12 +19,12 @@ main {
 
 .footer {
 	width: 100%;
-	position: fixed;
-	bottom: 0;
 	height: 60px;
+	bottom: 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: fixed;
 	background-color: $dark;
 
 	&__box {
@@ -37,8 +38,8 @@ main {
 
 .center {
 	width: 100%;
-	margin: 0 auto;
 	max-width: 1600px;
+	margin: 0 auto;
 }
 
 .hide {
@@ -46,9 +47,9 @@ main {
 }
 
 .wrapper {
-	position: absolute;
 	top: 50%;
 	left: 50%;
+	position: absolute;
 	transform: translate(-50%, -50%);
 }
 
@@ -93,16 +94,20 @@ main {
 
 .nav {
 	width: 100%;
+	position: sticky;
+	// position: fixed;
+	top: 0;
 	background-color: $dark;
+	z-index: 1;
 
 	.navbar {
 		min-width: 280px;
 		width: 100vw;
-		padding: 3rem 0rem;
-		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
+		padding: 3rem 0rem;
+		position: relative;
 		background-color: $dark;
 
 		&__btn {
@@ -125,8 +130,8 @@ main {
 		flex-direction: column;
 		align-items: center;
 		justify-content: flex-start;
-		background-color: $dark;
 		padding: 0 1rem;
+		background-color: $dark;
 	}
 
 	&__item {
@@ -139,7 +144,7 @@ main {
 		}
 
 		&:first-child,
-		&:nth-child(2) {
+		&:last-of-type {
 			&:hover .nav__item-link-icon-down {
 				color: $white;
 			}
@@ -155,8 +160,8 @@ main {
 		}
 
 		&-link {
-			display: inline-block;
 			width: 100%;
+			display: inline-block;
 			padding: 0.9rem 2rem;
 			position: relative;
 			background-color: $dark;
@@ -176,8 +181,8 @@ main {
 				cursor: pointer;
 			}
 			&-icon {
-				position: absolute;
 				right: 10px;
+				position: absolute;
 
 				&-down {
 					display: inline-block;
@@ -185,8 +190,8 @@ main {
 				}
 
 				&-right {
-					text-align: right;
 					display: none;
+					text-align: right;
 				}
 			}
 			&-second-stage {
@@ -219,43 +224,77 @@ main {
 	}
 }
 
-.heading {
+.home {
 	min-width: 280px;
-	width: 100%;
+	width: 100vw;
+	height: 84vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	background-image: url("../../dist/img/kodowanie_640.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position-y: top;
 	background-position-x: left;
-	width: 100vw;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 70vh;
+
 	&__box {
-		width: 100%;
-		height: 70vh;
-		background-color: $shadowGray;
+		min-width: 280px;
+		width: 100vw;
+		height: 84vh;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		padding: 5rem;
+		padding: 3rem;
+		background-color: $shadowGray;
+
+		&-img {
+			display: none;
+		}
+
+		&-buttons {
+			max-width: 400px;
+			margin: 2rem 0;
+			display: flex;
+			align-items: center;
+			justify-content: space-evenly;
+		}
+	}
+
+	&__header {
+		width: 100%;
+		min-width: 280px;
+		padding: 0 1.5rem;
+		padding-bottom: 3.5rem;
+		color: $white;
+		font-size: 2.8rem;
+		text-transform: Capitalize;
+		text-align: left;
+		font-weight: bold;
+		letter-spacing: 2px;
 	}
 	&__text {
-		padding-bottom: 4rem;
+		width: 100%;
+		padding: 0 1.5rem;
+		padding-bottom: 2rem;
 		color: $white;
-		font-size: 2.4rem;
-		text-align: center;
-		font-weight: bold;
+		font-size: 1.5rem;
+		text-align: left;
+		letter-spacing: 3px;
+
+		&-span {
+			color: $bgBlue;
+			font-size: 1.6rem;
+		}
 	}
+
 	&__button {
-		background-color: $aztecBlue;
+		padding: 1rem 0rem;
 		border: 1px solid $darkerBlue;
 		border-radius: 50px;
-		padding: 0.5rem 0;
-		transition: color .3s, background-color .3s;
+		background-color: $aztecBlue;
+		transition: color 0.3s, background-color 0.3s;
 
 		&:hover {
 			background-color: $white;
@@ -263,15 +302,193 @@ main {
 		}
 	}
 	&__link {
-		padding: 0.5rem 3rem;
+		padding: 1rem 2rem;
 		color: $white;
 		text-decoration: none;
-		font-size: 1.4rem;
+		font-size: 1.5rem;
 		font-weight: bold;
-		transition: color .3s;
+		transition: color 0.3s;
 
 		&:hover {
 			color: $black;
+		}
+	}
+
+	&__img {
+		display: none;
+	}
+}
+
+.about-me {
+	width: 100vw;
+	min-width: 280px;
+	padding: 2rem 2rem 0 2rem;
+	background-color: $dark;
+	color: $white;
+	border-bottom: 1px solid $gray;
+
+	&__box {
+		max-width: 1600px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		&-text {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+
+			&-header {
+				width: 100%;
+				margin: 1rem;
+				padding-bottom: 1.5rem;
+				color: $bgBlue;
+				font-size: 2.8rem;
+				text-align: center;
+				font-family: roboto;
+				letter-spacing: 5px;
+			}
+
+			&-text {
+				font-size: 1.3rem;
+				padding-bottom: 3rem;
+			}
+
+			&-info {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: space-evenly;
+
+				&-data {
+					padding: 1rem 0;
+					width: 100%;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					justify-content: center;
+					font-size: 1.2rem;
+
+					&-icon {
+						width: 10%;
+						color: $aztecBlue;
+					}
+
+					&-header {
+						width: 45%;
+						color: $bgBlue;
+					}
+
+					&-text {
+						width: 45%;
+					}
+
+					&-link {
+						color: $white;
+						font-style: none;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+
+		&-img2,
+		&-img {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&-photo {
+				width: 85%;
+				margin: 3rem;
+				padding: 5rem 0;
+				box-sizing: border-box;
+				border-top: 2px solid $bgBlue;
+			}
+		}
+
+		&-img {
+			display: none;
+		}
+	}
+
+	&-icon {
+		&__section {
+			padding-top: 5rem;
+			min-width: 280px;
+			// background-color: #2d7ae5d2;
+		}
+
+		&__header {
+			padding: 1.5rem;
+			padding-bottom: 5rem;
+			font-size: 1.8rem;
+			text-align: center;
+			font-weight: bold;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			letter-spacing: 2px;
+		}
+
+		&__box {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			padding: 0 4rem;
+		}
+
+		&__card {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width: 20rem;
+			height: 20rem;
+			background-color: $white;
+			box-sizing: border-box;
+			margin-bottom: 3rem;
+			position: relative;
+		}
+
+		&__icons {
+			font-size: 120px;
+
+			&-header {
+				font-size: 2rem;
+				text-transform: uppercase;
+				font-weight: bold;
+				padding-bottom: 2rem;
+			}
+
+			&-html {
+				color: #ff5733;
+			}
+
+			&-css {
+				color: #1a73e8;
+			}
+
+			&-javascript {
+				color: #f0db4f;
+			}
+
+			&-sass {
+				color: #cd6799;
+			}
+
+			&-bootstrap {
+				color: #553c7b;
+			}
+
+			&-gulp {
+				color: #db4446;
+			}
+
+			&-wordpress {
+				color: #00749c;
+			}
 		}
 	}
 }

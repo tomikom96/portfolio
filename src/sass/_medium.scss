@@ -11,7 +11,7 @@
 			&-img {
 				margin: 0;
 			}
-			
+
 			&-links {
 				display: flex;
 				align-items: center;
@@ -24,17 +24,17 @@
 					justify-content: center;
 					flex-direction: row;
 					padding: 0 1rem;
-					font-size: 1.4rem;
 					color: $white;
+					font-size: 1.4rem;
 					text-decoration: none;
 				}
 
 				&-icon {
 					display: block;
-					text-align: center;
 					padding-right: 0.5rem;
-					font-size: 2rem;
 					color: $aztecBlue;
+					text-align: center;
+					font-size: 2rem;
 				}
 				&-svg {
 					padding: 0rem;
@@ -50,14 +50,13 @@
 		&__list {
 			display: flex;
 			flex-direction: row;
+			justify-content: center;
 			position: sticky;
-			
+
 			&-third-stage {
 				position: absolute;
 				transform: translate(74.5%, -24%);
 			}
-
-			
 		}
 
 		&__item {
@@ -70,15 +69,18 @@
 
 			&-link {
 				font-size: 1.5rem;
+				text-align: center;
 				&-second-stage {
 					min-width: 150px;
 					padding-left: 3rem;
+					text-align: left;
 				}
 
 				&-third-stage {
 					min-width: 200px;
+					text-align: left;
 				}
-				
+
 				&-icon-down {
 					color: $aztecBlue;
 
@@ -95,6 +97,81 @@
 		}
 		&--hide {
 			display: none;
+		}
+	}
+
+	.home {
+		background-image: url("../../dist/img/kodowanie_1920.jpg");
+
+		&__box {
+			padding: 6rem;
+			&-text {
+				width: 100%;
+				padding: 0 10rem;
+				// display: none;
+			}
+		}
+
+		&__header {
+			font-size: 4rem;
+		}
+
+		&__text {
+			font-size: 2rem;
+			letter-spacing: 5px;
+
+			&-span {
+				font-size: 2.1rem;
+			}
+		}
+
+		&__button {
+			padding: 1.5rem 0rem;
+		}
+
+		&__link {
+			padding: 1.5rem 3rem;
+			font-size: 2rem;
+		}
+	}
+
+	.about-me {
+		padding: 7rem 2rem 7rem 2rem;
+
+		&__box {
+			flex-direction: row;
+			&-text {
+				width: 50vw;
+
+				&-header {
+					font-size: 4rem;
+				}
+
+				&-text {
+					font-size: 2rem;
+					word-spacing: 1px;
+				}
+			}
+
+			&-img2,
+			&-img {
+				width: 50vw;
+
+				&-photo {
+					width: 80%;
+					border-top: 0;
+					border-right: 2px solid $bgBlue;
+					padding: 0 5rem 0 0;
+				}
+			}
+
+			&-img2 {
+				display: none;
+			}
+
+			&-img {
+				display: flex;
+			}
 		}
 	}
 }
